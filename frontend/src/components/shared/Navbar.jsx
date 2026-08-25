@@ -9,6 +9,7 @@ import { toast } from 'sonner';
 import axios from 'axios';
 import { USER_API_END_POINT } from '@/utils/constant.js';
 import { setUser } from '@/redux/authSlice.js';
+import Logo from "../Logo.jsx";
 
 function Navbar() {
   const {user} = useSelector(store=>store.auth);
@@ -49,7 +50,8 @@ function Navbar() {
   return (
     <div className='bg-gray-400 relative'>
         <div className='flex items-center justify-between mx-auto max-w-7xl h-16 px-4'>
-            <div>
+            <div className='flex items-center gap-2'>
+                <Logo size={28} />
                 <h1 className='text-xl md:text-2xl font-bold'>Job<span className='text-[#F83002]'>Portal</span></h1>
             </div>
 
